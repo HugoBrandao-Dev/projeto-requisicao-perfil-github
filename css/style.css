@@ -1,0 +1,221 @@
+@font-face {
+	font-family: "Dongle";
+	src: url("fonts/Dongle-Light.ttf") format("truetype");
+	font-weight: lighter;
+}
+
+@font-face {
+	font-family: "Dongle";
+	src: url("fonts/Dongle-Regular.ttf") format("truetype");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Dongle";
+	src: url("fonts/Dongle-Bold.ttf") format("truetype");
+	font-weight: bold;
+}
+
+* {
+	font-family: "Dongle";
+	font-weight: normal;
+	font-size: 100%;
+	line-height: 1rem;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+input, button {
+	outline: none;
+}
+
+button, a {
+	cursor: pointer;
+}
+
+img {
+	width: 100%;
+}
+
+:root {
+	--cor-fundo-claro: rgb(0,204,204);
+	--cor-texto-escuro: rgb(0,26,26);
+	--cor-texto-claro: rgb(255,255,255);
+}
+
+/* ########## CABEÇALHO ########## */
+
+#cabecalho, #principal, #rodape {
+	padding: 20px 20px;
+	width: 100%;
+}
+
+#cabecalho {
+	background-color: var(--cor-fundo-claro);
+	display: flex;
+	flex-direction: column;
+}
+
+#cabecalho h1 {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: var(--cor-texto-claro);
+	text-align: center;
+	margin-bottom: 15px;
+}
+
+/* Formulário */
+
+#cabecalho .form-buscar {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden; /* Permite que o border-radius seja "aplicado" no filho.  */
+	border-radius: 3px;
+}
+
+#cabecalho .form-buscar input, #cabecalho .form-buscar button {
+	border: 2px solid var(--cor-texto-claro);
+	padding: 10px;
+	height: 40px;
+	font-size: 1.2rem;
+}
+
+#cabecalho .form-buscar button {
+	background-color: var(--cor-fundo-claro);
+	color: var(--cor-texto-claro);
+	border-top: none;
+	opacity: 0.9;
+}
+
+#cabecalho .form-buscar button:hover {
+	opacity: 1;
+}
+
+/* ########## PRINCIPAL ########## */
+
+/* Usuários */
+
+#usuarios {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+#usuarios .usuario {
+	box-shadow: 0 0 5px black;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#usuarios .usuario h2 {
+	font-size: 1.5rem;
+	width: 100%;
+	padding: 10px 0;
+	text-align: center;
+}
+
+#usuarios .usuario .sobre {
+	display: flex;
+	flex-direction: column;
+}
+
+.usuario .sobre p {
+	padding: 10px;
+	font-size: 1.2rem;
+}
+
+.usuario .sobre a {
+	font-size: 1.2rem;
+	padding: 10px;
+	border: 2px solid var(--cor-fundo-claro);
+	background-color: var(--cor-fundo-claro);
+	color: var(--cor-texto-claro);
+	border-radius: 0 0 3px 3px;
+	text-align: center;
+}
+
+/* ########## RODAPÉ ##########  */
+
+#rodape {
+	background-color: var(--cor-fundo-claro);
+	color: var(--cor-texto-claro);
+}
+
+#rodape p {
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+#rodape p a {
+	color: var(--cor-texto-claro);
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+@media screen and (min-width: 480px) {
+
+	/* ########## CABEÇALHO ########## */
+
+	#cabecalho {
+		align-items: center;
+	}
+
+	/* Formulário */
+
+	#cabecalho .form-buscar {
+		width: 50%;
+	}
+
+	/* Usuários */
+
+	#usuarios .usuario {
+		width: 50%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (min-width: 768px) {
+
+	/* ########## CABEÇALHO ########## */
+
+	#cabecalho {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	/* Formulário */
+
+	#cabecalho .form-buscar {
+		flex-direction: row;
+		width: 30%;
+		justify-content: space-between;
+		overflow: unset;
+	}
+
+	#cabecalho .form-buscar input, #cabecalho .form-buscar button {
+		border-radius: 3px;
+		border: 2px solid var(--cor-texto-claro);
+	}
+
+	#cabecalho .form-buscar input {
+		width: 65%;
+	}
+
+	#cabecalho .form-buscar button {
+		width: 30%;
+	}
+
+	#cabecalho .form-buscar button:hover {
+
+	}
+
+	/* ########## PRINCIPAL ########## */
+
+	#principal #usuarios .usuario {
+		width: 25%;
+	}
+}
